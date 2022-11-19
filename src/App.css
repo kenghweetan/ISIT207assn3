@@ -1,38 +1,292 @@
-.App {
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --overlay-color: rgba(24, 39, 51 , 0.85);
+  --menu-speed: 0.75s;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #264653;  
+  color: whitesmoke;
+}
+
+.logo-header {
+  margin: 0 auto 0 5rem;
+  width: 100%;
+  text-align: left;
+  
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 0rem;
+  
+}
+
+
+h1 { 
+  font-family: 'Happy Monkey', cursive;
+  color:  whitesmoke;
+  font-size: 2.3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p { 
+  font-family: 'Happy Monkey', cursive;
+  color:  whitesmoke;
+  font-size: 1rem;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label {
+  font-family: 'Happy Monkey', cursive;
+  display: inline-block;
+  margin: 0 0;
+  font-size: 2rem;
+  padding: 0.2rem;
+
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dedede;
+  border-radius: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-btn {
+  cursor: pointer;
+  background-color: orange;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-family: 'Happy Monkey', cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 20px auto;
+  padding: 10px;
+  width: 30%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.task-table {
+  width: 100%;
+}
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.btn:focus,  .done-btn:focus, 
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list li:hover .delete-btn{
+  opacity: 1;
+}
+
+.list li:hover .done-btn {
+  opacity: 1;
+}
+.list li.done {
+  border-right: 8px solid #2ecc71;
+}
+
+.list li.notdone {
+  border-right: 8px solid #c0392b;
+}
+
+
+.done-btn {
+  cursor: pointer;
+  background-color: rgb(23, 36, 3);
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translate(-100%, -50%);
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+/* React animated logo */ 
+
+  .react-container{
+  
+    margin:3rem 10rem 2rem 2rem;
+    background: #aebbc0;
+    text-align: left;
+    
+  
+  }
+
+  .react-logo{
+    display: inline-block;
+    border-radius:50%;
+    border:3px solid #00d8ff;
+
+    animation-name:rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+
+  .react-logo , .react-logo:before , .react-logo:after{
+    position:absolute;
+    display: inline-block;
+    width:75px;
+    height:30px;
+    border-radius:50%;
+    border:3px solid #00d8ff;
+  }
+
+  .nucleo , .react-logo , .react-logo:before , .react-logo:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nucleo{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#00d8ff;
+  }
+
+  .react-logo:before , .react-logo:after{
+    content:"";
+  }
+
+  .react-logo:after{
+    transform:rotate(-57deg);
+  }
+
+  .react-logo:before{
+    transform:rotate(57deg);
+  }
+  
+.title{
+  font-size:60px;
+  background:#222;
+  color:#00d8ff;
+  width:250px;
+  margin:2px auto;
+  text-align:center;
+}
+
+  @keyframes rotate{
+
+    100%{
+      transform:rotate(360deg);
+    }
+  }
+
+  .heading {
+    display: flex;
+    align-items: flex-start;
+    margin: 1rem 2rem 0 1rem;
+  }
+
+  
+nav {
+  display: flex;
+  padding: 0.5rem;
+  margin-bottom:0.2rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+}
+nav a {
+  padding: 0.5rem;
+  color:rgb(18, 140, 197);
+  text-decoration:none;
+  font-weight: 800;
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menuitem a:hover, .dropdown:hover .dropbtn {
+  color: rgb(163, 179, 179);
+}
+.menuitem {
+  position: absolute;
+  left: 12rem;
+  top:  3rem;
+}
+
+.home {
+  margin: 2rem;
+  padding: 2rem;
+  background-image: url(./images/connection.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  
+  margin-top: 0px;
+  
+}
+.home-img {
+  width: 80%;
+  margin: 3rem;
+}
+
+.home h1 {
+  text-align: left;
+  margin: 3rem;
 }
