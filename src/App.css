@@ -1,6 +1,6 @@
 :root {
   --primary-color: rgba(13, 110, 139, 0.75);
-  --overlay-color: rgba(24, 39, 51 , 0.85);
+  --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #264653;  
+  background-color: #264653;
   color: whitesmoke;
 }
 
@@ -26,39 +26,23 @@ body {
   margin: 0 auto 0 5rem;
   width: 100%;
   text-align: left;
-  
+
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 80%;
-  padding: 0rem;
-  
-}
-
-
-h1 { 
+/* h1 {
   font-family: 'Happy Monkey', cursive;
-  color:  whitesmoke;
+  /* color: whitesmoke;
   font-size: 2.3rem;
   text-align: center;
 }
 
-p { 
+p {
   font-family: 'Happy Monkey', cursive;
-  color:  whitesmoke;
-  font-size: 1rem;
+  /* color: whitesmoke;
+  font-size: 1rem; 
   text-align: left;
-}
+} */
 
-label {
-  font-family: 'Happy Monkey', cursive;
-  display: inline-block;
-  margin: 0 0;
-  font-size: 2rem;
-  padding: 0.2rem;
-
-}
 input {
   display: block;
   width: 100%;
@@ -105,6 +89,7 @@ input {
 .task-table {
   width: 100%;
 }
+
 .list {
   list-style-type: none;
   padding: 0;
@@ -124,18 +109,20 @@ input {
   font-weight: 500;
 }
 
-.btn:focus,  .done-btn:focus, 
+.btn:focus,
+.done-btn:focus,
 .delete-btn:focus {
   outline: 0;
 }
 
-.list li:hover .delete-btn{
+.list li:hover .delete-btn {
   opacity: 1;
 }
 
 .list li:hover .done-btn {
   opacity: 1;
 }
+
 .list li.done {
   border-right: 8px solid #2ecc71;
 }
@@ -161,126 +148,135 @@ input {
   transition: opacity 0.5s ease;
 }
 
-/* React animated logo */ 
+/* React animated logo */
 
-  .react-container{
-  
-    margin:3rem 10rem 2rem 2rem;
-    background: #aebbc0;
-    text-align: left;
-    
-  
-  }
+.react-container {
 
-  .react-logo{
-    display: inline-block;
-    border-radius:50%;
-    border:3px solid #00d8ff;
+  margin: 3rem 10rem 2rem 2rem;
+  background: #aebbc0;
+  text-align: left;
 
-    animation-name:rotate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 
-  }
-
-  .react-logo , .react-logo:before , .react-logo:after{
-    position:absolute;
-    display: inline-block;
-    width:75px;
-    height:30px;
-    border-radius:50%;
-    border:3px solid #00d8ff;
-  }
-
-  .nucleo , .react-logo , .react-logo:before , .react-logo:after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nucleo{
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background:#00d8ff;
-  }
-
-  .react-logo:before , .react-logo:after{
-    content:"";
-  }
-
-  .react-logo:after{
-    transform:rotate(-57deg);
-  }
-
-  .react-logo:before{
-    transform:rotate(57deg);
-  }
-  
-.title{
-  font-size:60px;
-  background:#222;
-  color:#00d8ff;
-  width:250px;
-  margin:2px auto;
-  text-align:center;
 }
 
-  @keyframes rotate{
+.react-logo {
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #00d8ff;
 
-    100%{
-      transform:rotate(360deg);
-    }
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+.react-logo,
+.react-logo:before,
+.react-logo:after {
+  position: absolute;
+  display: inline-block;
+  width: 75px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid #00d8ff;
+}
+
+.nucleo,
+.react-logo,
+.react-logo:before,
+.react-logo:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nucleo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00d8ff;
+}
+
+.react-logo:before,
+.react-logo:after {
+  content: "";
+}
+
+.react-logo:after {
+  transform: rotate(-57deg);
+}
+
+.react-logo:before {
+  transform: rotate(57deg);
+}
+
+.title {
+  font-size: 60px;
+  background: #222;
+  color: #00d8ff;
+  width: 250px;
+  margin: 2px auto;
+  text-align: center;
+}
+
+@keyframes rotate {
+
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  .heading {
-    display: flex;
-    align-items: flex-start;
-    margin: 1rem 2rem 0 1rem;
-  }
+.heading {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 2rem 0 1rem;
+}
 
-  
+
 nav {
   display: flex;
   padding: 0.5rem;
-  margin-bottom:0.2rem;
+  margin-bottom: 0.2rem;
   align-items: center;
-  
+
 }
+
 nav a {
   padding: 0.5rem;
-  color:rgb(18, 140, 197);
-  text-decoration:none;
+  color: rgb(18, 140, 197);
+  text-decoration: none;
   font-weight: 800;
   font-size: 2rem;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: whitesmoke;
 }
-
-.menuitem a:hover, .dropdown:hover .dropbtn {
+ */
+.menuitem a:hover,
+.dropdown:hover .dropbtn {
   color: rgb(163, 179, 179);
 }
-.menuitem {
+
+/* .menuitem {
   position: absolute;
   left: 12rem;
-  top:  3rem;
-}
+  top: 3rem;
+} */
 
 .home {
   margin: 2rem;
   padding: 2rem;
-  background-image: url(./images/connection.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  
+
   margin-top: 0px;
-  
+
 }
+
 .home-img {
   width: 80%;
   margin: 3rem;

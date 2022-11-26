@@ -1,3 +1,4 @@
+import { Pagination } from "@mantine/core";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 
@@ -12,7 +13,7 @@ const Items = ({ currentItems }) => {
   );
 };
 
-const PaginatedItems = ({ itemsPerPage, items }) => {
+const PaginatedItems = ({ itemsPerPage = 0, items = [] }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);

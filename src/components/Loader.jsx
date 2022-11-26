@@ -1,5 +1,5 @@
 const Loader = () => {
-  return <div class="card skeleton-box"></div>;
+  return <div className="card skeleton-box"></div>;
 };
 
 export default Loader;
